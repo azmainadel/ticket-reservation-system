@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text fill="#2884da" layoutX="7.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You're just a minute away from registering as our user!" textAlignment="CENTER" wrappingWidth="549.42578125">
+         <font>
+            <Font name="Microsoft New Tai Lue Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField layoutX="148.0" layoutY="177.0" />
+      <TextField layoutX="146.0" layoutY="136.0" promptText="user@example.com" />
+      <TextField layoutX="146.0" layoutY="95.0" />
+      <PasswordField layoutX="148.0" layoutY="216.0" promptText="Cannot contain spaces" />
+      <PasswordField layoutX="148.0" layoutY="256.0" />
+      <Text layoutX="200.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Information">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="genderchoice" layoutX="148.0" layoutY="341.0" prefWidth="150.0" />
+      <Label layoutX="70.0" layoutY="99.0" text="Full Name:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="140.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="181.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="220.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="260.0" text="Re-enter Password:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="genderchoice" layoutX="80.0" layoutY="345.0" text="Gender:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="genderchoice1" layoutX="54.0" layoutY="384.0" text="Date of Birth:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="146.0" layoutY="380.0" />
+   </children>
+</AnchorPane>
