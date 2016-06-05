@@ -23,16 +23,21 @@ public class Controller{
     @FXML
     private TextField userpassword;
 
-    public void Login(ActionEvent event) throws IOException{
+    public void HandleLogin(ActionEvent event){
         if(userid.getText().equals("azmain") && userpassword.getText().equals("pass")){
             lblstatus.setText("Login Successful");
         }
         else lblstatus.setText("Login Failed");
     }
-    public void SignUp(ActionEvent event) throws IOException {
-        Scene signup = new Scene();
-        signup.
+
+    public void HandleSignUp(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Stage primaryStage=new Stage();
+        primaryStage.setTitle("Ticket Reservation System Demo");
+        primaryStage.setScene(new Scene(root, 700, 500));
+        primaryStage.show();
     }
+
 
 
 

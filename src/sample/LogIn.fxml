@@ -1,57 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="loginpage" prefHeight="359.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="359.0" prefWidth="329.0">
-         <children>
-            <Button fx:id="login" layoutX="141.0" layoutY="206.0" mnemonicParsing="false" onAction="#Login" text="Login">
-               <font>
-                  <Font name="Segoe UI" size="16.0" />
-               </font>
-            </Button>
-            <PasswordField fx:id="userpassword" alignment="CENTER" layoutX="26.0" layoutY="160.0" prefHeight="34.0" prefWidth="292.0" promptText="Password">
-               <font>
-                  <Font name="Segoe UI" size="16.0" />
-               </font>
-            </PasswordField>
-            <TextField fx:id="userid" alignment="CENTER" layoutX="26.0" layoutY="113.0" prefHeight="34.0" prefWidth="292.0" promptText="User ID">
-               <font>
-                  <Font name="Segoe UI" size="16.0" />
-               </font>
-            </TextField>
-            <Label fx:id="lblstatus" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="58.0" prefHeight="42.0" prefWidth="328.0" text="Enter UserID and Password" textAlignment="CENTER" textFill="#f21515">
-               <font>
-                  <Font name="Segoe UI" size="16.0" />
-               </font>
-            </Label>
-            <Text fill="#69a7f2" layoutX="51.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Sign up now!" wrappingWidth="242.4140625">
-               <font>
-                  <Font name="Calibri" size="16.0" />
-               </font>
-            </Text>
-            <Button fx:id="createID" layoutX="96.0" layoutY="292.0" mnemonicParsing="false" onAction="#SignUp" text="Create an Account">
-               <font>
-                  <Font name="Segoe UI" size="16.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
+      <Button fx:id="login" layoutX="141.0" layoutY="206.0" mnemonicParsing="false" onAction="#HandleLogin" text="Login">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="userpassword" alignment="CENTER" layoutX="26.0" layoutY="160.0" prefHeight="34.0" prefWidth="292.0" promptText="Password">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="userid" alignment="CENTER" layoutX="26.0" layoutY="113.0" prefHeight="34.0" prefWidth="292.0" promptText="User ID">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblstatus" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="58.0" prefHeight="42.0" prefWidth="328.0" text="Enter UserID and Password" textAlignment="CENTER" textFill="#f21515">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Text fill="#69a7f2" layoutX="51.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Sign up now!" wrappingWidth="242.4140625">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="signup" layoutX="96.0" layoutY="292.0" mnemonicParsing="false" onAction="#HandleSignUp" text="Create an Account">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Button>
    </children>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
-</GridPane>
+</AnchorPane>
