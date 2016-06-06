@@ -1,13 +1,10 @@
 package sample;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -31,7 +28,7 @@ public class Controller{
     }
 
     public void HandleSignUp(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("SignUp2.fxml"));
         Stage primaryStage=new Stage();
         primaryStage.setTitle("Ticket Reservation System Demo");
         primaryStage.setScene(new Scene(root, 700, 500));
