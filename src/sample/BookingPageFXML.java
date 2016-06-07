@@ -26,7 +26,7 @@ public class BookingPageFXML extends LogInFXML{
 
     private String BusRoot,BusTime,BusDate;
     private String TrainName,TrainDate;
-    private String movieTime, movieDate;
+    private String ShowTime,ShowDate;
 
     @FXML
     private CheckBox Bog2Dha;
@@ -125,7 +125,7 @@ public class BookingPageFXML extends LogInFXML{
     @FXML
     private void TrainSelectSeat(ActionEvent event) throws IOException {
         Pane root = FXMLLoader.load(getClass().getResource("BookingTrainSeat.fxml"));
-        Stage stage=new Stage();
+        Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -141,44 +141,46 @@ public class BookingPageFXML extends LogInFXML{
         ((Node)(event.getSource())).getScene().getWindow().hide();
     }
 
+    @FXML
+    private CheckBox pm6;
+    @FXML
+    private CheckBox pm10;
+    @FXML
+    private DatePicker dpTheatre;
+    @FXML
+    private Button SelectSeatTheatre;
+
 
     @FXML
-    private void m_t12_clk(ActionEvent event) {
-        movieTime ="t1";
+    private void Theatre6PM(ActionEvent event) { ShowTime = "6PM";
+    }
+    @FXML
+    private void Theatre10PM(ActionEvent event) { ShowTime = "10PM";
+    }
+    @FXML
+    private void DatePickedTrain(ActionEvent event){ ShowDate = dpTheatre.getValue().toString();
     }
 
-    @FXML
-    private void m_t3_clk(ActionEvent event) {
-        movieTime ="t2";
-    }
 
     @FXML
-    private void m_d1_clk(ActionEvent event) {
-        movieDate ="d1";
-    }
-
-    @FXML
-    private void m_d2_clk(ActionEvent event) {
-        movieDate ="d2";
-    }
-
-    @FXML
-    private void m_nxt_clk(ActionEvent event) throws IOException {
-        Pane root = FXMLLoader.load(getClass().getResource("FXMLtheater.fxml"));
-        Stage stage=new Stage();
+    private void TheatreSelectSeat(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("BookingTheatreSeat.fxml"));
+        Stage stage = new Stage();
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
-        Client.outToServer.writeBytes("movie" + '\n');
-        //System.out.println(busName+busDay+busRoot+busTime);
-        //Client.outToServer.writeBytes(busName + '\n');
-        //Client.outToServer.writeBytes(busRoot + '\n');
-        Client.outToServer.writeBytes(movieDate + '\n');
-        Client.outToServer.writeBytes(movieTime + '\n');
-        ((Node)(event.getSource())).getScene().getWindow().hide();
 
+        System.out.println("Writing....");
+
+        ClientController.OutToServer.writeBytes("Theatre" + '\n');
+        System.out.println(ShowTime+ShowDate);
+
+        ClientController.OutToServer.writeBytes(ShowDate + '\n');
+        ClientController.OutToServer.writeBytes(ShowTime + '\n');
+
+        ((Node)(event.getSource())).getScene().getWindow().hide();
     }
+
 
     /**
      * Initializes the controller class.
