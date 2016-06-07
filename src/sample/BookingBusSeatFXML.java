@@ -20,6 +20,7 @@ import static sample.ClientController.InFromServer;
 import static sample.ClientController.OutToServer;
 
 public class BookingBusSeatFXML implements Initializable {
+
     private String SeatNameBus;
 
     @FXML
