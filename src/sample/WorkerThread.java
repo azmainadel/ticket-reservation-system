@@ -216,13 +216,13 @@ public class WorkerThread implements Runnable {
                         String LogFile = "";
 
                         if (STime.equals("6PM")) {
-                            if (SDate.equals("9June")) LogFile = "6PM_9June";
-                            if (SDate.equals("10June")) LogFile = "6PM_10June";
+                            if (SDate.equals("9June")) LogFile = "Show_6PM_9June";
+                            if (SDate.equals("10June")) LogFile = "Show_6PM_10June";
                         }
 
                         if (STime.equals("10PM")) {
-                            if (SDate.equals("9June")) LogFile = "10PM_9June";
-                            if (SDate.equals("10June")) LogFile = "10PM_10June";
+                            if (SDate.equals("9June")) LogFile = "Show_10PM_9June";
+                            if (SDate.equals("10June")) LogFile = "Show_10PM_10June";
                         }
 
                         System.out.println(LogFile);
