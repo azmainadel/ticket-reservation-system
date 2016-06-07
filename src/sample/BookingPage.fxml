@@ -29,7 +29,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <DatePicker fx:id="dpBus" layoutX="226.0" layoutY="149.0" onAction="#DatePickedBus" promptText="Select 08/06 or 09/06" />
+                  <DatePicker fx:id="dpBus" layoutX="226.0" layoutY="149.0" onAction="#DatePickedBus" promptText="Select 09/06 or 10/06" />
                   <Text layoutX="84.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Time: " wrappingWidth="92.0703125">
                      <font>
                         <Font size="15.0" />
@@ -73,7 +73,7 @@
                   </Text>
                   <CheckBox fx:id="Train2" layoutX="179.0" layoutY="168.0" mnemonicParsing="false" onAction="#Laalmoni" text="Laalmoni Express" />
                   <CheckBox fx:id="Train3" layoutX="179.0" layoutY="194.0" mnemonicParsing="false" onAction="#Moitree" text="Moitree Express" />
-                  <DatePicker fx:id="dpTrain" editable="false" layoutX="180.0" layoutY="246.0" onAction="#DatePickedTrain" promptText="Select 08/06 or 09/06" />
+                  <DatePicker fx:id="dpTrain" editable="false" layoutX="180.0" layoutY="246.0" onAction="#DatePickedTrain" promptText="Select 09/06 or 10/06" />
                   <Text layoutX="82.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="92.0703125">
                      <font>
                         <Font size="15.0" />
@@ -104,7 +104,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <DatePicker fx:id="dpTheatre" editable="false" layoutX="227.0" layoutY="210.0" onAction="#DatePickedTheatre" promptText="Select 08/06 or 09/06" />
+                  <DatePicker fx:id="dpTheatre" editable="false" layoutX="227.0" layoutY="210.0" onAction="#DatePickedTheatre" promptText="Select 09/06 or 10/06" />
                   <Button fx:id="SelectSeatTheatre" layoutX="252.0" layoutY="288.0" mnemonicParsing="false" onAction="#TheatreSelectSeat" prefHeight="28.0" prefWidth="97.0" text="Select Seat" />
                </children></AnchorPane>
         </content>

@@ -24,7 +24,7 @@ import static com.sun.corba.se.impl.util.Utility.printStackTrace;
 
 public class BookingPageFXML extends LogInFXML{
 
-    private String BusRoot,BusTime,BusDate;
+    private String BusRoute,BusTime,BusDate;
     private String TrainName,TrainDate;
     private String ShowTime,ShowDate;
 
@@ -45,19 +45,15 @@ public class BookingPageFXML extends LogInFXML{
 
     @FXML
     private void BograToDhaka(ActionEvent event) {
-        BusRoot = "BograToDhaka";
+        BusRoute = "BograToDhaka";
     }
     @FXML
     private void DhakaToBogra(ActionEvent event) {
-        BusRoot = "DhakaToBogra";
+        BusRoute = "DhakaToBogra";
     }
     @FXML
     private void DhakaToChittagong(ActionEvent event) {
-        BusRoot = "DhakaToChittagong";
-    }
-    @FXML
-    private void DatePickedBus(ActionEvent event) {
-        BusDate = dpBus.getValue().toString();
+        BusRoute = "DhakaToChittagong";
     }
     @FXML
     private void Bus10AM(ActionEvent event) {
@@ -67,28 +63,32 @@ public class BookingPageFXML extends LogInFXML{
     private void Bus4PM(ActionEvent event) {
         BusTime = "4PM";
     }
+    @FXML
+    private void DatePickedBus(ActionEvent event) {
+        if(dpBus.getValue().toString().equals("2016-06-09")) BusDate = "9June";
+        else if(dpBus.getValue().toString().equals("2016-06-10")) BusDate = "10June";
+    }
+/*    @FXML
+    private void DatePickedBus(ActionEvent event){
+        BusDate = dpBus.getValue().toString();
+    }*/
 
     @FXML
-    private void BusSelectSeat(ActionEvent event) {
-        Pane root;
-        try {
-            root = FXMLLoader.load(getClass().getResource("BookingBusSeat.fxml"));
-            Stage stage=new Stage();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+    private void BusSelectSeat(ActionEvent event) throws IOException {
+        Pane root = FXMLLoader.load(getClass().getResource("BookingBusSeat.fxml"));
+        Stage stage=new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
-            System.out.println("Writing....");
+        System.out.println("Writing....");
 
-            ClientController.OutToServer.writeBytes("Bus" + '\n');
-            System.out.println(BusDate+BusRoot+BusTime);
+        ClientController.OutToServer.writeBytes("Bus" + '\n');
+        System.out.println(BusDate+BusRoute+BusTime);
 
-            ClientController.OutToServer.writeBytes(BusRoot + '\n');
-            ClientController.OutToServer.writeBytes(BusDate + '\n');
-            ClientController.OutToServer.writeBytes(BusTime + '\n');
-        } catch (Exception ex) {
-            printStackTrace();
-        }
+        ClientController.OutToServer.writeBytes(BusRoute + '\n');
+        ClientController.OutToServer.writeBytes(BusDate + '\n');
+        ClientController.OutToServer.writeBytes(BusTime + '\n');
 
         ((Node)(event.getSource())).getScene().getWindow().hide();
     }
@@ -107,20 +107,25 @@ public class BookingPageFXML extends LogInFXML{
 
     @FXML
     private void Subarna(ActionEvent event) {
-        TrainName = "Subarna Express";
+        TrainName = "SubarnaExpress";
     }
     @FXML
     private void Laalmoni(ActionEvent event) {
-        TrainName = "Laalmoni Express";
+        TrainName = "LaalmoniExpress";
     }
     @FXML
     private void Moitree(ActionEvent event) {
-        TrainName = "Moitree Express";
+        TrainName = "MoitreeExpress";
     }
     @FXML
+    private void DatePickedTrain(ActionEvent event) {
+        if(dpTrain.getValue().toString().equals("2016-06-09")) TrainDate = "9June";
+        else if(dpTrain.getValue().toString().equals("2016-06-10")) TrainDate = "10June";
+    }
+/*    @FXML
     private void DatePickedTrain(ActionEvent event){
         TrainDate = dpTrain.getValue().toString();
-    }
+    }*/
 
     @FXML
     private void TrainSelectSeat(ActionEvent event) throws IOException {
@@ -152,14 +157,17 @@ public class BookingPageFXML extends LogInFXML{
 
 
     @FXML
-    private void Theatre6PM(ActionEvent event) { ShowTime = "6PM";
-    }
+    private void Theatre6PM(ActionEvent event) { ShowTime = "6PM"; }
     @FXML
-    private void Theatre10PM(ActionEvent event) { ShowTime = "10PM";
-    }
+    private void Theatre10PM(ActionEvent event) { ShowTime = "10PM"; }
     @FXML
-    private void DatePickedTrain(ActionEvent event){ ShowDate = dpTheatre.getValue().toString();
+    private void DatePickedTheatre(ActionEvent event) {
+        if(dpTheatre.getValue().toString().equals("2016-06-09")) ShowDate = "9June";
+        else if(dpTheatre.getValue().toString().equals("2016-06-10")) ShowDate = "10June";
     }
+/*    @FXML
+    private void DatePickedTheatre(ActionEvent event){ ShowDate = dpTheatre.getValue().toString();
+    }*/
 
 
     @FXML
@@ -182,9 +190,6 @@ public class BookingPageFXML extends LogInFXML{
     }
 
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

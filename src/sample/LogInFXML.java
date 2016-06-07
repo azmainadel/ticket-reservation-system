@@ -77,7 +77,7 @@ public class LogInFXML implements Initializable {
     @FXML
     public void SignUpButton(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("SignUpNew.fxml"));
-        Stage primaryStage=new Stage();
+        Stage primaryStage = new Stage();
         primaryStage.setTitle("Sign Up Page");
         primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();
