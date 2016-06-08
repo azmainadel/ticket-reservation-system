@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,17 +8,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpSuccessFXML">
+<AnchorPane id="AnchorPane" prefHeight="314.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpSuccessFXML">
    <children>
-      <Text layoutX="161.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for registering!" wrappingWidth="277.435546875">
+      <ImageView fitHeight="314.0" fitWidth="452.0" pickOnBounds="true">
+         <image>
+            <Image url="@whiteimage.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="94.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for registering!" wrappingWidth="277.435546875">
          <font>
-            <Font size="24.0" />
+            <Font name="Calibri" size="25.0" />
          </font>
       </Text>
-      <Button fx:id="close" layoutX="246.0" layoutY="176.0" mnemonicParsing="false" onAction="#CloseButton" prefHeight="25.0" prefWidth="107.0" text="Close">
+      <Button fx:id="close" layoutX="169.0" layoutY="176.0" mnemonicParsing="false" onAction="#CloseButton" prefHeight="25.0" prefWidth="107.0" text="Close">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
+      <Text layoutX="14.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please start the program again and Sign In.">
+         <font>
+            <Font name="Calibri" size="25.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
