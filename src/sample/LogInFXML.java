@@ -49,20 +49,32 @@ public class LogInFXML implements Initializable {
         OutToServer.writeBytes(UserID + '\n');
         OutToServer.writeBytes(Password + '\n');
 
-        if(InFromServer.readLine().equals("Logging In")){
-            try {
-                infostatus.setText("Login Successful");
+        if(InFromServer.readLine().equals("ok")){
 
+            infostatus.setText("Login Successful");
+
+            try {
                 Stage stage = new Stage();
-                Pane root = FXMLLoader.load(getClass().getResource("FXMLAfterLogIn.fxml"));
+                FXMLLoader loader = new FXMLLoader();
+                Pane root = FXMLLoader.load(getClass().getResource("BookingPageNew.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
 
+
                 ((Node)(event.getSource())).getScene().getWindow().hide();
+
+
             } catch (IOException ex) {
-                Logger.getLogger(LogInFXML.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(BookingPageFXML.class.getName()).log(Level.SEVERE, null, ex);
             }
+
+            /*  Stage stage = new Stage();
+                Pane root = FXMLLoader.load(getClass().getResource("BookingPage.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();*/
+
         }
         else
             infostatus.setText("Invalid ID or Password");
@@ -79,7 +91,7 @@ public class LogInFXML implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("SignUpNew.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Sign Up Page");
-        primaryStage.setScene(new Scene(root, 700, 500));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
         ((Node)(event.getSource())).getScene().getWindow().hide();

@@ -55,13 +55,13 @@ public class SignUpFXML implements Initializable {
             Phone = UserPhoneInput.getText();
             DOB = UserDOB.getValue().toString();
 
-            OutToServer.writeBytes(Name+'\n');
-            OutToServer.writeBytes(Email+'\n');
-            OutToServer.writeBytes(ID+'\n');
-            OutToServer.writeBytes(Pass+'\n');
-            OutToServer.writeBytes(Card+'\n');
-            OutToServer.writeBytes(Phone+'\n');
-            OutToServer.writeBytes(DOB+'\n');
+            OutToServer.writeBytes(Name + '\n');
+            OutToServer.writeBytes(Email + '\n');
+            OutToServer.writeBytes(ID + '\n');
+            OutToServer.writeBytes(Pass + '\n');
+            OutToServer.writeBytes(Card + '\n');
+            OutToServer.writeBytes(Phone + '\n');
+            OutToServer.writeBytes(DOB + '\n');
 
         } catch (IOException e) {
             e.printStackTrace();

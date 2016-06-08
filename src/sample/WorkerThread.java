@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.Socket;
 
 public class WorkerThread implements Runnable {
-    static Socket ConnectionSocket = null;
+    private static Socket ConnectionSocket = null;
     private final int ID;
 
     public WorkerThread(Socket s, int i) {
@@ -14,7 +14,7 @@ public class WorkerThread implements Runnable {
 
     @Override
     public void run() {
-        String Key1, Key2, Key3;
+        String Key1, Key2;
         String Option;
         String NameFile, MailFile, IDFile, PassFile, CardFile, PhoneFile, DOBFile;
         String IDCheck, PassCheck, CardCheck;
@@ -33,7 +33,11 @@ public class WorkerThread implements Runnable {
                 IDCheck = InFromServer.readLine();
                 PassCheck = InFromServer.readLine();
 
-                FileReader FR = new FileReader("F:\\My Codes\\TRS\\datafiles\\" + IDCheck + ".txt");
+                //System.out.println("inside");
+
+                //System.out.println(IDCheck + "    " + PassCheck);
+
+                FileReader FR = new FileReader("F:\\My Codes\\TRS\\" + IDCheck + ".txt");
                 BufferedReader BR = new BufferedReader(FR);
 
                 NameFile = BR.readLine();
@@ -96,7 +100,7 @@ public class WorkerThread implements Runnable {
 
                         System.out.println(LogFile);
 
-                        FileReader BusFile = new FileReader("F:\\My Codes\\TRS\\datafiles\\" + LogFile + ".txt");
+                        FileReader BusFile = new FileReader("F:\\My Codes\\TRS\\" + LogFile + ".txt");
                         BufferedReader BusRead = new BufferedReader(BusFile);
 
                         String p;
@@ -118,7 +122,7 @@ public class WorkerThread implements Runnable {
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
 
-                            FileWriter FW1 = new FileWriter(NameFile + ".txt", true);
+                            FileWriter FW1 = new FileWriter(IDFile + ".txt", true);
                             PrintWriter IDLogWriter = new PrintWriter(FW1);
 
                             IDLogWriter.println("            Bus Log            ");
@@ -165,7 +169,7 @@ public class WorkerThread implements Runnable {
 
                         System.out.println(LogFile);
 
-                        FileReader TrainFile = new FileReader("F:\\My Codes\\TRS\\datafiles\\" + LogFile + ".txt");
+                        FileReader TrainFile = new FileReader("F:\\My Codes\\TRS\\" + LogFile + ".txt");
                         BufferedReader TrainRead = new BufferedReader(TrainFile);
 
                         String p;
@@ -187,7 +191,7 @@ public class WorkerThread implements Runnable {
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
 
-                            FileWriter FW1 = new FileWriter(NameFile + ".txt", true);
+                            FileWriter FW1 = new FileWriter(IDFile + ".txt", true);
                             PrintWriter IDLogWriter = new PrintWriter(FW1);
 
                             IDLogWriter.println("            Train Log            ");
@@ -227,7 +231,7 @@ public class WorkerThread implements Runnable {
 
                         System.out.println(LogFile);
 
-                        FileReader TheatreFile = new FileReader("F:\\My Codes\\TRS\\datafiles\\" + LogFile + ".txt");
+                        FileReader TheatreFile = new FileReader("F:\\My Codes\\TRS\\" + LogFile + ".txt");
                         BufferedReader TheatreRead = new BufferedReader(TheatreFile);
 
                         String p;
@@ -249,7 +253,7 @@ public class WorkerThread implements Runnable {
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
 
-                            FileWriter FW1 = new FileWriter(NameFile + ".txt", true);
+                            FileWriter FW1 = new FileWriter(IDFile + ".txt", true);
                             PrintWriter IDLogWriter = new PrintWriter(FW1);
 
                             IDLogWriter.println("            Theatre Log            ");
@@ -283,7 +287,7 @@ public class WorkerThread implements Runnable {
 
                 if (Key2.equals("ok")) {
                     String q;
-                    FileReader FRNew = new FileReader("F:\\My Codes\\TRS\\datafiles\\" + IDFile + ".txt");
+                    FileReader FRNew = new FileReader("F:\\My Codes\\TRS\\" + IDFile + ".txt");
                     BufferedReader BRNew = new BufferedReader(FRNew);
 
                     q = BRNew.readLine();
@@ -300,7 +304,7 @@ public class WorkerThread implements Runnable {
 
             }
 
-            if (Key1.equals("signup")) {
+            if (Key1.equals("SignUp")) {
 
                 NameFile = InFromServer.readLine();
                 MailFile = InFromServer.readLine();
@@ -310,7 +314,9 @@ public class WorkerThread implements Runnable {
                 PhoneFile = InFromServer.readLine();
                 DOBFile = InFromServer.readLine();
 
-                PrintWriter PW = new PrintWriter(NameFile + ".txt");
+                System.out.println(IDFile);
+
+                PrintWriter PW = new PrintWriter(IDFile + ".txt");
 
                 PW.println(NameFile);
                 PW.println(MailFile);
