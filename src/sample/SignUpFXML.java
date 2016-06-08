@@ -75,6 +75,7 @@ public class SignUpFXML implements Initializable {
         }
 
         Stage stage = new Stage();
+        stage.setTitle("Reserve-It! ©Azmain");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

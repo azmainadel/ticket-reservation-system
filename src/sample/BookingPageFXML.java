@@ -118,6 +118,7 @@ public class BookingPageFXML implements Initializable {
             Logger.getLogger(BookingPageFXML.class.getName()).log(Level.SEVERE, null, ex);
         }
         Stage stage = new Stage();
+        stage.setTitle("Reserve-It! ©Azmain");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -176,6 +177,7 @@ public class BookingPageFXML implements Initializable {
             Logger.getLogger(BookingPageFXML.class.getName()).log(Level.SEVERE, null, ex);
         }
         Stage stage = new Stage();
+        stage.setTitle("Reserve-It! ©Azmain");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -234,6 +236,7 @@ public class BookingPageFXML implements Initializable {
             e.printStackTrace();
         }
         Stage stage = new Stage();
+        stage.setTitle("Reserve-It! ©Azmain");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

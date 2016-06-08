@@ -127,7 +127,7 @@
                         </Text>
                         <CheckBox fx:id="Train1" layoutX="180.0" layoutY="143.0" mnemonicParsing="false" onAction="#Subarna" text="Subarna Express">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
                         <Text layoutX="77.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Train: " wrappingWidth="92.0703125">
                            <font>
@@ -136,11 +136,11 @@
                         </Text>
                         <CheckBox fx:id="Train2" layoutX="179.0" layoutY="168.0" mnemonicParsing="false" onAction="#Laalmoni" text="Laalmoni Express">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
                         <CheckBox fx:id="Train3" layoutX="179.0" layoutY="194.0" mnemonicParsing="false" onAction="#Moitree" text="Moitree Express">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
                         <DatePicker fx:id="dpTrain" editable="false" layoutX="180.0" layoutY="246.0" onAction="#DatePickedTrain" promptText="Select 09/06 or 10/06" />
                         <Text layoutX="82.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="92.0703125">

@@ -69,35 +69,6 @@ public class BookingCompleteFXML implements Initializable {
 
     }
 
-/*    @FXML
-    private void info_btn_clk(ActionEvent event){
-        try {
-            outToServer.writeBytes("ok"+'\n');
-            String p;
-            String q;
-            p=inFromServer.readLine();
-           FileWriter fwriter = new FileWriter("C:\\Users\\ASUS\\Desktop\\"+p+".txt",true);
-            PrintWriter appfile = new PrintWriter(fwriter);
-
-            while(!p.equals("end")){
-                appfile.println(p);
-                p=inFromServer.readLine();
-                System.out.println(p);
-            }
-            appfile.close();
-
-            Pane root = FXMLLoader.load(getClass().getResource("FXMLprofile.fxml"));
-            Stage stage=new Stage();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-            ((Node)(event.getSource())).getScene().getWindow().hide();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 
     @FXML
     private void FinishButton(ActionEvent event) {

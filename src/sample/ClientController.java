@@ -22,7 +22,7 @@ public class ClientController extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("LogInNew.fxml"));
-        primaryStage.setTitle("Ticket Reservation System");
+        primaryStage.setTitle("Reserve-It! ©Azmain");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

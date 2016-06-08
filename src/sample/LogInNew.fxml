@@ -14,39 +14,44 @@
             <Image url="@whiteimage.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="userid" alignment="CENTER" layoutX="84.0" layoutY="143.0" prefHeight="34.0" prefWidth="292.0" promptText="User ID">
+      <ImageView fitHeight="126.0" fitWidth="255.0" layoutX="103.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@reserveit.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userid" alignment="CENTER" layoutX="85.0" layoutY="188.0" prefHeight="34.0" prefWidth="292.0" promptText="User ID">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="userpassword" alignment="CENTER" layoutX="84.0" layoutY="195.0" prefHeight="34.0" prefWidth="292.0" promptText="Password">
+      <PasswordField fx:id="userpassword" alignment="CENTER" layoutX="85.0" layoutY="240.0" prefHeight="34.0" prefWidth="292.0" promptText="Password">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </PasswordField>
-      <Button fx:id="login" layoutX="199.0" layoutY="242.0" mnemonicParsing="false" onAction="#SignInButton" text="Login">
+      <Button fx:id="login" layoutX="200.0" layoutY="287.0" mnemonicParsing="false" onAction="#SignInButton" text="Login">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="signup" layoutX="158.0" layoutY="333.0" mnemonicParsing="false" onAction="#SignUpButton" text="Create an Account">
+      <Button fx:id="signup" layoutX="159.0" layoutY="378.0" mnemonicParsing="false" onAction="#SignUpButton" text="Create an Account">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Button>
-      <Label fx:id="infostatus" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="89.0" prefHeight="42.0" prefWidth="328.0" text="Enter UserID and Password" textAlignment="CENTER" textFill="#f21515">
+      <Label fx:id="infostatus" alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="146.0" prefHeight="42.0" prefWidth="328.0" text="Please Enter UserID and Password" textAlignment="CENTER" textFill="#f21515">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Text fill="#69a7f2" layoutX="117.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Sign up now!" wrappingWidth="242.4140625">
+      <Text fill="#69a7f2" layoutX="118.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Sign up now!" wrappingWidth="242.4140625">
          <font>
             <Font name="Calibri" size="16.0" />
          </font>
       </Text>
-      <Text layoutX="18.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to our Ticket Reservation System" wrappingWidth="446.0">
+      <Text fill="#1e65d0" layoutX="85.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to ReserveIT!" wrappingWidth="300.0">
          <font>
-            <Font name="Calibri Bold" size="25.0" />
+            <Font name="Calibri Bold" size="31.0" />
          </font>
       </Text>
    </children>

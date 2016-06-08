@@ -55,8 +55,8 @@ public class LogInFXML implements Initializable {
 
             try {
                 Stage stage = new Stage();
-                FXMLLoader loader = new FXMLLoader();
                 Pane root = FXMLLoader.load(getClass().getResource("BookingPageNew.fxml"));
+                stage.setTitle("Reserve-It! ©Azmain");
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
