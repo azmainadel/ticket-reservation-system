@@ -1,46 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingPageFXML">
    <children>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab closable="false" text="                       Bus                           ">
+            <Tab text="                    Theatre                       ">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Text layoutX="80.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Route: " wrappingWidth="92.0703125">
+                        <ImageView fitHeight="377.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@whiteimage.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="249.0" fitWidth="247.0" layoutX="386.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@macbeth.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="98.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Playing : MACBETH">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="pm6Theatre" layoutX="227.0" layoutY="93.0" mnemonicParsing="false" onAction="#Theatre6PM" text="6 PM" />
+                        <CheckBox fx:id="pm10Theatre" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#Theatre10PM" text="10 PM" />
+                        <Text layoutX="92.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Showtime:" wrappingWidth="118.0703125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="228.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Format: From - To" wrappingWidth="135.0703125">
+                        <Text layoutX="92.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="118.0703125">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="15.0" />
                            </font>
                         </Text>
-                        <CheckBox fx:id="Bog2Dha" layoutX="244.0" layoutY="56.0" mnemonicParsing="false" onAction="#BograToDhaka" text="Bogra - Dhaka" />
-                        <CheckBox fx:id="Dha2Bog" layoutX="244.0" layoutY="78.0" mnemonicParsing="false" onAction="#DhakaToBogra" text="Dhaka - Bogra" />
-                        <CheckBox fx:id="Dha2Chi" layoutX="244.0" layoutY="100.0" mnemonicParsing="false" onAction="#DhakaToChittagong" text="Dhaka - Chittagong" />
-                        <Text layoutX="84.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date: " wrappingWidth="92.0703125">
+                        <DatePicker fx:id="dpTheatre" editable="false" layoutX="184.0" layoutY="188.0" onAction="#DatePickedTheatre" promptText="Select 09/06 or 10/06" />
+                        <Button fx:id="SelectSeatTheatre" layoutX="170.0" layoutY="279.0" mnemonicParsing="false" onAction="#TheatreSelectSeat" prefHeight="35.0" prefWidth="115.0" text="Select Section" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="                       Bus                           ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="373.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@whiteimage.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="121.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Route: " wrappingWidth="92.0703125">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="198.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Format: From - To" wrappingWidth="203.0703125">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="Bog2Dha" layoutX="234.0" layoutY="56.0" mnemonicParsing="false" onAction="#BograToDhaka" text="Bogra - Dhaka">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></CheckBox>
+                        <CheckBox fx:id="Dha2Bog" layoutX="234.0" layoutY="78.0" mnemonicParsing="false" onAction="#DhakaToBogra" text="Dhaka - Bogra">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></CheckBox>
+                        <CheckBox fx:id="Dha2Chi" layoutX="234.0" layoutY="100.0" mnemonicParsing="false" onAction="#DhakaToChittagong" text="Dhaka - Chittagong">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></CheckBox>
+                        <Text layoutX="121.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date: " wrappingWidth="92.0703125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
                         <DatePicker fx:id="dpBus" layoutX="226.0" layoutY="149.0" onAction="#DatePickedBus" promptText="Select 09/06 or 10/06" />
-                        <Text layoutX="84.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Time: " wrappingWidth="92.0703125">
+                        <Text layoutX="121.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Time: " wrappingWidth="92.0703125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
                         <CheckBox fx:id="am10Bus" layoutX="227.0" layoutY="203.0" mnemonicParsing="false" onAction="#Bus10AM" text="10 AM" />
-                        <CheckBox fx:id="pm4Bus" layoutX="322.0" layoutY="203.0" mnemonicParsing="false" onAction="#Bus4PM" text="4 PM" />
-                        <Button fx:id="SelectSeatBus" layoutX="262.0" layoutY="273.0" mnemonicParsing="false" onAction="#BusSelectSeat" prefHeight="28.0" prefWidth="97.0" text="Select Seat" />
+                        <CheckBox fx:id="pm4Bus" layoutX="231.0" layoutY="233.0" mnemonicParsing="false" onAction="#Bus4PM" text="4 PM" />
+                        <Button fx:id="SelectSeatBus" layoutX="232.0" layoutY="288.0" mnemonicParsing="false" onAction="#BusSelectSeat" prefHeight="44.0" prefWidth="135.0" text="Select Seat" />
                      </children>
                   </AnchorPane>
                </content>
@@ -49,34 +100,48 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Text layoutX="149.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Trains Currently Available" wrappingWidth="301.0703125">
+                        <ImageView fitHeight="374.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@whiteimage.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#ff0101" layoutX="171.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Trains Currently Available" wrappingWidth="301.0703125">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="79.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Subarna Express - Chittagong to Dhaka - 8:00AM" wrappingWidth="489.0703125">
                            <font>
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <Text layoutX="101.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Subarna Express - Chittagong to Dhaka - 8:00AM" wrappingWidth="383.0703125">
+                        <Text layoutX="72.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Laalmoni Express - Lalmonirhaat to Dhaka - 7:00PM" wrappingWidth="502.0703125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="21.0" />
                            </font>
                         </Text>
-                        <Text layoutX="101.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Laalmoni Express - Lalmonirhaat to Dhaka - 7:00PM" wrappingWidth="394.0703125">
+                        <Text layoutX="94.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Moitree Express - Dhaka to Rajshahi - 2:30PM" wrappingWidth="459.0703125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="21.0" />
                            </font>
                         </Text>
-                        <Text layoutX="101.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Moitree Express - Dhaka to Rajshahi - 2:30PM" wrappingWidth="402.0703125">
+                        <CheckBox fx:id="Train1" layoutX="180.0" layoutY="143.0" mnemonicParsing="false" onAction="#Subarna" text="Subarna Express">
                            <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Text>
-                        <CheckBox fx:id="Train1" layoutX="180.0" layoutY="142.0" mnemonicParsing="false" onAction="#Subarna" text="Subarna Express" />
+                              <Font name="System Bold" size="12.0" />
+                           </font></CheckBox>
                         <Text layoutX="77.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Train: " wrappingWidth="92.0703125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <CheckBox fx:id="Train2" layoutX="179.0" layoutY="168.0" mnemonicParsing="false" onAction="#Laalmoni" text="Laalmoni Express" />
-                        <CheckBox fx:id="Train3" layoutX="179.0" layoutY="194.0" mnemonicParsing="false" onAction="#Moitree" text="Moitree Express" />
+                        <CheckBox fx:id="Train2" layoutX="179.0" layoutY="168.0" mnemonicParsing="false" onAction="#Laalmoni" text="Laalmoni Express">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></CheckBox>
+                        <CheckBox fx:id="Train3" layoutX="179.0" layoutY="194.0" mnemonicParsing="false" onAction="#Moitree" text="Moitree Express">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></CheckBox>
                         <DatePicker fx:id="dpTrain" editable="false" layoutX="180.0" layoutY="246.0" onAction="#DatePickedTrain" promptText="Select 09/06 or 10/06" />
                         <Text layoutX="82.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="92.0703125">
                            <font>
@@ -84,33 +149,6 @@
                            </font>
                         </Text>
                         <Button fx:id="SelectSeatTrain" layoutX="250.0" layoutY="292.0" mnemonicParsing="false" onAction="#TrainSelectSeat" prefHeight="28.0" prefWidth="97.0" text="Select Seat" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="                    Theatre                       ">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Text layoutX="34.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Playing: Romeo and Juliet">
-                           <font>
-                              <Font size="34.0" />
-                           </font>
-                        </Text>
-                        <CheckBox fx:id="pm6Theatre" layoutX="227.0" layoutY="93.0" mnemonicParsing="false" onAction="#Theatre6PM" text="6PM" />
-                        <CheckBox fx:id="pm10Theatre" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#Theatre10PM" text="10PM" />
-                        <Text layoutX="92.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Showtime:" wrappingWidth="118.0703125">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="102.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="118.0703125">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Text>
-                        <DatePicker fx:id="dpTheatre" editable="false" layoutX="227.0" layoutY="210.0" onAction="#DatePickedTheatre" promptText="Select 09/06 or 10/06" />
-                        <Button fx:id="SelectSeatTheatre" layoutX="252.0" layoutY="288.0" mnemonicParsing="false" onAction="#TheatreSelectSeat" prefHeight="28.0" prefWidth="97.0" text="Select Seat" />
                      </children>
                   </AnchorPane>
                </content>
