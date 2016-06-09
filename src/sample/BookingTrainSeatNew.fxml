@@ -9,6 +9,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingTrainSeatFXML">
    <children>
+      <ImageView fitHeight="150.0" fitWidth="349.0" pickOnBounds="true">
+         <image>
+            <Image url="@whiteimage.jpg" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@trainimage.png" />
@@ -64,7 +69,7 @@
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat10" layoutX="178.0" layoutY="210.0" mnemonicParsing="false" onAction="#T10" text="Seat 10">
+                  <RadioButton fx:id="TrainSeat10" layoutX="178.0" layoutY="211.0" mnemonicParsing="false" onAction="#T10" text="Seat 10">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -74,7 +79,7 @@
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat12" layoutX="177.0" layoutY="245.0" mnemonicParsing="false" onAction="#T12" text="Seat 12">
+                  <RadioButton fx:id="TrainSeat12" layoutX="178.0" layoutY="245.0" mnemonicParsing="false" onAction="#T12" text="Seat 12">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -94,17 +99,17 @@
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat17" layoutX="67.0" layoutY="346.0" mnemonicParsing="false" onAction="#T17" text="Seat 17">
+                  <RadioButton fx:id="TrainSeat17" layoutX="66.0" layoutY="346.0" mnemonicParsing="false" onAction="#T17" text="Seat 17">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat16" layoutX="180.0" layoutY="312.0" mnemonicParsing="false" onAction="#T16" text="Seat 16">
+                  <RadioButton fx:id="TrainSeat16" layoutX="179.0" layoutY="312.0" mnemonicParsing="false" onAction="#T16" text="Seat 16">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat15" layoutX="68.0" layoutY="313.0" mnemonicParsing="false" onAction="#T15" text="Seat 15">
+                  <RadioButton fx:id="TrainSeat15" layoutX="65.0" layoutY="313.0" mnemonicParsing="false" onAction="#T15" text="Seat 15">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -114,7 +119,7 @@
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat13" layoutX="67.0" layoutY="281.0" mnemonicParsing="false" onAction="#T13" text="Seat 13">
+                  <RadioButton fx:id="TrainSeat13" layoutX="64.0" layoutY="280.0" mnemonicParsing="false" onAction="#T13" text="Seat 13">
                      <font>
                         <Font size="20.0" />
                      </font>

@@ -18,42 +18,47 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="504.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="DODGERBLUE" height="78.0" layoutX="84.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="DODGERBLUE" height="78.0" layoutX="266.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="DODGERBLUE" height="78.0" layoutX="14.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="DODGERBLUE" height="78.0" layoutX="180.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="DODGERBLUE" height="78.0" layoutX="345.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
-                  <RadioButton fx:id="TrainSeat1" layoutX="94.0" layoutY="109.0" mnemonicParsing="false" onAction="#Sec1" text="Section 1" textFill="WHITE">
+                  <ImageView fitHeight="334.0" fitWidth="502.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@whiteimage.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#2bbc48" height="78.0" layoutX="85.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#2bbc48" height="78.0" layoutX="267.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#2bbc48" height="78.0" layoutX="15.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#2bbc48" height="78.0" layoutX="181.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#2bbc48" height="78.0" layoutX="346.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="139.0" />
+                  <RadioButton fx:id="TheatreSection1" layoutX="95.0" layoutY="96.0" mnemonicParsing="false" onAction="#Sec1" text="Section 1" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat2" layoutX="276.0" layoutY="108.0" mnemonicParsing="false" onAction="#Sec2" text="Section 2" textFill="WHITE">
+                  <RadioButton fx:id="TheatreSection2" layoutX="277.0" layoutY="95.0" mnemonicParsing="false" onAction="#Sec2" text="Section 2" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat3" layoutX="22.0" layoutY="219.0" mnemonicParsing="false" onAction="#Sec3" text="Section 3" textFill="WHITE">
+                  <RadioButton fx:id="TheatreSection3" layoutX="23.0" layoutY="206.0" mnemonicParsing="false" onAction="#Sec3" text="Section 3" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat4" layoutX="190.0" layoutY="219.0" mnemonicParsing="false" onAction="#Sec4" text="Section 4" textFill="WHITE">
+                  <RadioButton fx:id="TheatreSection4" layoutX="191.0" layoutY="206.0" mnemonicParsing="false" onAction="#Sec4" text="Section 4" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="TrainSeat5" layoutX="357.0" layoutY="219.0" mnemonicParsing="false" onAction="#Sec5" text="Section 5" textFill="WHITE">
+                  <RadioButton fx:id="TheatreSection5" layoutX="358.0" layoutY="206.0" mnemonicParsing="false" onAction="#Sec5" text="Section 5" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </RadioButton>
-                  <Button fx:id="BookTheatre" layoutX="203.0" layoutY="286.0" mnemonicParsing="false" onAction="#BookTheatreButton" prefHeight="25.0" prefWidth="92.0" text="Book Seat!">
+                  <Button fx:id="BookTheatre" layoutX="206.0" layoutY="280.0" mnemonicParsing="false" onAction="#BookTheatreButton" prefHeight="25.0" prefWidth="92.0" text="Book Seat!">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Label fx:id="TheatreStatus" alignment="CENTER" layoutX="106.0" layoutY="32.0" prefHeight="26.0" prefWidth="288.0" text="Status">
+                  <Label fx:id="TheatreStatus" alignment="CENTER" layoutX="106.0" layoutY="9.0" prefHeight="26.0" prefWidth="288.0" text="Status">
                      <font>
                         <Font size="17.0" />
                      </font>

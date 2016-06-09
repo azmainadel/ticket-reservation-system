@@ -30,7 +30,7 @@ public class BookingTheatreSeatFXML implements Initializable {
     @FXML
     private RadioButton TheatreSection2;
     @FXML
-    private RadioButton TheatreSecion3;
+    private RadioButton TheatreSection3;
     @FXML
     private RadioButton TheatreSection4;
     @FXML
@@ -80,7 +80,7 @@ public class BookingTheatreSeatFXML implements Initializable {
             ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         else {
-            TheatreStatus.setText("Section Filled Up");
+            TheatreStatus.setText("Not Available");
         }
 
     }

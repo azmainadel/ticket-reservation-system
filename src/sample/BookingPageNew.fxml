@@ -10,43 +10,6 @@
    <children>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab text="                    Theatre                       ">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="377.0" fitWidth="600.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@whiteimage.jpg" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="249.0" fitWidth="247.0" layoutX="386.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@macbeth.jpg" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="98.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Playing : MACBETH">
-                           <font>
-                              <Font size="34.0" />
-                           </font>
-                        </Text>
-                        <CheckBox fx:id="pm6Theatre" layoutX="227.0" layoutY="93.0" mnemonicParsing="false" onAction="#Theatre6PM" text="6 PM" />
-                        <CheckBox fx:id="pm10Theatre" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#Theatre10PM" text="10 PM" />
-                        <Text layoutX="92.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Showtime:" wrappingWidth="118.0703125">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="92.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="118.0703125">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Text>
-                        <DatePicker fx:id="dpTheatre" editable="false" layoutX="184.0" layoutY="188.0" onAction="#DatePickedTheatre" promptText="Select 09/06 or 10/06" />
-                        <Button fx:id="SelectSeatTheatre" layoutX="170.0" layoutY="279.0" mnemonicParsing="false" onAction="#TheatreSelectSeat" prefHeight="35.0" prefWidth="115.0" text="Select Section" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
             <Tab closable="false" text="                       Bus                           ">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -61,12 +24,12 @@
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="198.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Format: From - To" wrappingWidth="203.0703125">
+                        <Text layoutX="206.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Format: From - To" wrappingWidth="203.0703125">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Text>
-                        <CheckBox fx:id="Bog2Dha" layoutX="234.0" layoutY="56.0" mnemonicParsing="false" onAction="#BograToDhaka" text="Bogra - Dhaka">
+                        <CheckBox fx:id="Bog2Dha" layoutX="234.0" layoutY="51.0" mnemonicParsing="false" onAction="#BograToDhaka" text="Bogra - Dhaka">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
@@ -74,7 +37,7 @@
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
-                        <CheckBox fx:id="Dha2Chi" layoutX="234.0" layoutY="100.0" mnemonicParsing="false" onAction="#DhakaToChittagong" text="Dhaka - Chittagong">
+                        <CheckBox fx:id="Dha2Chi" layoutX="234.0" layoutY="105.0" mnemonicParsing="false" onAction="#DhakaToChittagong" text="Dhaka - Chittagong">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font></CheckBox>
@@ -90,7 +53,7 @@
                            </font>
                         </Text>
                         <CheckBox fx:id="am10Bus" layoutX="227.0" layoutY="203.0" mnemonicParsing="false" onAction="#Bus10AM" text="10 AM" />
-                        <CheckBox fx:id="pm4Bus" layoutX="231.0" layoutY="233.0" mnemonicParsing="false" onAction="#Bus4PM" text="4 PM" />
+                        <CheckBox fx:id="pm4Bus" layoutX="227.0" layoutY="233.0" mnemonicParsing="false" onAction="#Bus4PM" text="4 PM" />
                         <Button fx:id="SelectSeatBus" layoutX="232.0" layoutY="288.0" mnemonicParsing="false" onAction="#BusSelectSeat" prefHeight="44.0" prefWidth="135.0" text="Select Seat" />
                      </children>
                   </AnchorPane>
@@ -149,6 +112,43 @@
                            </font>
                         </Text>
                         <Button fx:id="SelectSeatTrain" layoutX="250.0" layoutY="292.0" mnemonicParsing="false" onAction="#TrainSelectSeat" prefHeight="28.0" prefWidth="97.0" text="Select Seat" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="                    Theatre                       ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="377.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@whiteimage.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="249.0" fitWidth="247.0" layoutX="386.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@macbeth.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="98.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Playing : MACBETH">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="pm6Theatre" layoutX="227.0" layoutY="93.0" mnemonicParsing="false" onAction="#Theatre6PM" text="6 PM" />
+                        <CheckBox fx:id="pm10Theatre" layoutX="227.0" layoutY="126.0" mnemonicParsing="false" onAction="#Theatre10PM" text="10 PM" />
+                        <Text layoutX="92.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Showtime:" wrappingWidth="118.0703125">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="92.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="118.0703125">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="dpTheatre" editable="false" layoutX="184.0" layoutY="188.0" onAction="#DatePickedTheatre" promptText="Select 09/06 or 10/06" />
+                        <Button fx:id="SelectSeatTheatre" layoutX="170.0" layoutY="279.0" mnemonicParsing="false" onAction="#TheatreSelectSeat" prefHeight="35.0" prefWidth="115.0" text="Select Section" />
                      </children>
                   </AnchorPane>
                </content>

@@ -15,3 +15,8 @@ DhakaToChittagong
 4PM
 9June
 A2
+            Bus Log            
+BograToDhaka
+10AM
+10June
+B1

@@ -117,7 +117,7 @@ public class WorkerThread implements Runnable {
                             p = BusRead.readLine();
                         }
                         BusRead.close();
-                        ;
+
 
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
@@ -186,7 +186,7 @@ public class WorkerThread implements Runnable {
                             p = TrainRead.readLine();
                         }
                         TrainRead.close();
-                        ;
+
 
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
@@ -207,6 +207,7 @@ public class WorkerThread implements Runnable {
                             DataLogWriter.println(TSeat);
 
                             DataLogWriter.close();
+
                         } else OutToServer.writeBytes(" " + '\n');
 
                     }
@@ -248,7 +249,7 @@ public class WorkerThread implements Runnable {
                             p = TheatreRead.readLine();
                         }
                         TheatreRead.close();
-                        ;
+
 
                         if (flag == 1) {
                             OutToServer.writeBytes("ok" + '\n');
@@ -269,6 +270,7 @@ public class WorkerThread implements Runnable {
                             DataLogWriter.println(SSection);
 
                             DataLogWriter.close();
+
                         } else OutToServer.writeBytes(" " + '\n');
 
                     }
